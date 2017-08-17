@@ -10,7 +10,7 @@ using System.Windows.Forms;
  * Date: August 12, 2017
  * StudentID: 300923951
  * Description: This is the ScoreBoard class
- * Version: 0.1 - Created the ScoreBoard class
+ * Version: 0.2 - updated UpdateTime method
  */
 
 namespace COMP123_S2017_FinalExam_StudentID
@@ -92,7 +92,9 @@ namespace COMP123_S2017_FinalExam_StudentID
         // public method
         public void UpdateTime()
         {
-
+            this.Time = int.Parse(this.TimeTextBox.Text);
+            this.Time--;
+            this.TimeTextBox.Text = this.Time.ToString();
         }
     }
 }
