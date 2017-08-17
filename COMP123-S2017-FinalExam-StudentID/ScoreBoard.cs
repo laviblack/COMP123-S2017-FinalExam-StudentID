@@ -10,7 +10,7 @@ using System.Windows.Forms;
  * Date: August 12, 2017
  * StudentID: 300923951
  * Description: This is the ScoreBoard class
- * Version: 0.2 - updated UpdateTime method
+ * Version: 0.3 - added comments
  */
 
 namespace COMP123_S2017_FinalExam_StudentID
@@ -82,14 +82,27 @@ namespace COMP123_S2017_FinalExam_StudentID
         }
 
         // constructor
+        /// <summary>
+        /// This is the constructo for the ScoreBoard class
+        /// It takes three arguments
+        /// </summary>
+        /// <param name="scoreTextBox"></param>
+        /// <param name="timeTextBox"></param>
+        /// <param name="finalScoreTextBox"></param>
         public ScoreBoard(TextBox scoreTextBox, TextBox timeTextBox, TextBox finalScoreTextBox)
         {
-            scoreTextBox = this.ScoreTextBox;
-            timeTextBox = this.TimeTextBox;
-            finalScoreTextBox = this.FinalScoreTextBox;
+            this.ScoreTextBox = scoreTextBox;
+            this.TimeTextBox = timeTextBox;
+            this.FinalScoreTextBox = finalScoreTextBox;
+            this.Score = int.Parse(this.ScoreTextBox.Text);
+            this.FinalScoreTextBox.Text = this.Score.ToString();
+            this.Time = int.Parse(this.TimeTextBox.Text);
         }
 
         // public method
+        /// <summary>
+        /// This is the UpadateTime method to show the time reducing
+        /// </summary>
         public void UpdateTime()
         {
             this.Time = int.Parse(this.TimeTextBox.Text);
