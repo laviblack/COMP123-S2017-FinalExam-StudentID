@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
- * Name:
- * Date:
- * StudentID:
- * Description:
- * Version:
+ * Name: Lyrica Yoshida
+ * Date: August 12, 2017
+ * StudentID: 300923951
+ * Description: This is the PickHighestCardForm class
+ * Version: 0.1 - Added the FormClosing event handler
  */
 
 namespace COMP123_S2017_FinalExam_StudentID
@@ -394,6 +394,11 @@ namespace COMP123_S2017_FinalExam_StudentID
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void PickHighestCardForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
